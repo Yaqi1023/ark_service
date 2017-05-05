@@ -26,14 +26,13 @@ class Minter(models.Model):
 		    key = arkpy.mint(authority = setting.NAAN, prefix = self.prefix, template = seif.template)
 		    while _ark_exists(key):
 		       key = arkpy.mint()
-		    ark = Ark.object.Create(key = key, minter = self)
+		    ark = Ark.object.create(key = key, minter = self)
 		    ark.save()
 		    ark_list.appreal(ark)
-		    if quantity = 1
-		        return ark_list(0)
-		    return ark_list
+		 if quantity = 1
+		    return ark_list(0)
+		 return ark_list
 
-		pass
 			
 
 class Ark(models.Model):
