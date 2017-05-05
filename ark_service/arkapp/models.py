@@ -28,9 +28,9 @@ class Minter(models.Model):
 		       key = arkpy.mint()
 		    ark = Ark.object.create(key = key, minter = self)
 		    ark.save()
-		    ark_list.appreal(ark)
+		    ark_list.append(ark)
 		 if quantity = 1
-		    return ark_list(0)
+		    return ark_list[0]
 		 return ark_list
 
 			
