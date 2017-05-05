@@ -5,9 +5,9 @@ from ark.models import Ark, Minter
 
 
 # Create your views here.
-def mint(request, minter_id, quantatity)
+def mint(request, minter_id, quantity)
     minter = get_object_or_404(Minter, pk = minter_id)
-    return minter.mint()
+    return minter.mint(quantity = quantity)
 
 def bind(request, key, url):
 	ark = get_object_or_404(Ark, key = key)
