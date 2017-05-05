@@ -20,7 +20,19 @@ class Minter(models.Model):
 		else:
 			return False
 
-	def mint(self, quantity):
+	def mint(self, quantity = 1):
+		ark_list = []
+		for x in quantity
+		    key = arkpy.mint(authority = setting.NAAN, prefix = self.prefix, template = seif.template)
+		    while _ark_exists(key):
+		       key = arkpy.mint()
+		    ark = Ark.object.Create(key = key, minter = self)
+		    ark.save()
+		    ark_list.appreal(ark)
+		    if quantity = 1
+		        return ark_list(0)
+		    return ark_list
+
 		pass
 			
 
@@ -34,5 +46,5 @@ class Ark(models.Model):
 	def __repr__(self):
 		return '<Ark: {}>'.format(self.key)
 
-	def bind(self, url):
-		pass
+	def bind(request, key, url):
+		self.url = url
